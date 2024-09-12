@@ -104,7 +104,7 @@ const EditForm: React.FC<EditFormProps> = ({ postId }) => {
             ) : (
                 <form
                     onSubmit={handleSubmit}
-                    className="space-y-6 bg-white shadow-lg rounded-lg max-w-4xl mx-auto p-6"
+                    className="space-y-6 bg-white shadow-lg rounded-lg max-w-4xl mx-auto p-6 text-black"
                 >
                     <div>
                         <label htmlFor="title" className="block text-sm font-medium text-gray-700">

@@ -16,9 +16,14 @@ const Dashboard: React.FC = () => {
             <div className="container mx-auto py-16 px-6">
                 {/* Welcome Section */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900">Hello, Ananya 👋</h1>
-                    <p className="text-lg text-gray-600 mt-2">Writing daily helps you grow and refine your skills. Make it a habit and watch your talent flourish!</p>
-                    </div>
+                    <h1 className="text-4xl font-bold text-gray-900">
+                        Hello, Ananya <span role="img" aria-label="waving hand">👋</span>
+                    </h1>
+                    <p className="text-lg text-gray-600 mt-2">
+                        Writing daily helps you grow and refine your skills. Make it a habit and watch your talent flourish! <span role="img" aria-label="smiling face">😊</span>
+                    </p>
+
+                </div>
 
                 {/* Call to Action Section */}
                 <div className="flex justify-center mb-10">
