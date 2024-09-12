@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import PostForm from '@/components/custom/Post_form';
 

@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "react-quill/dist/quill.snow.css"; // Import Quill styles
-import ReactQuill from "react-quill";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button"; // ShadCN Button
 import { Input } from "@/components/ui/input"; // ShadCN Input
+import { Textarea } from "@/components/ui/textarea"; // ShadCN Textarea
 import {
     Select,
     SelectContent,
@@ -131,24 +130,17 @@ const EditForm: React.FC<EditFormProps> = ({ postId }) => {
                         >
                             Writing Content
                         </label>
-                        <div className="mt-1">
-                            <ReactQuill
-                                value={writingContent}
-                                onChange={setWritingContent}
-                                theme="snow"
-                                style={{
-                                    height: "300px", // Adjust the height as needed
-                                    maxHeight: "400px",
-                                }}
-                                className="w-full border border-gray-300 rounded-md shadow-sm"
-                            />
-                        </div>
+                        <Textarea
+                            id="writing_content"
+                            name="writing_content"
+                            value={writingContent}
+                            onChange={(e) => setWritingContent(e.target.value)}
+                            className="mt-1 block w-full"
+                            rows={10} // Adjust the height based on number of rows
+                        />
                         {errors.writing_content && (
                             <div className="text-red-500 text-sm mt-2">{errors.writing_content}</div>
                         )}
-                    </div>
-                    <div className="p-3">
-
                     </div>
 
                     <div className="mt-6">

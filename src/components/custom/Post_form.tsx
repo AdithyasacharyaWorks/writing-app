@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import "react-quill/dist/quill.snow.css"; // Import Quill styles
-import ReactQuill from "react-quill";
-import { useRouter } from "next/navigation"; // Use Next.js router for navigation
-import { Button } from "@/components/ui/button"; // ShadCN Button
-import { Input } from "@/components/ui/input"; // ShadCN Input
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
@@ -74,8 +73,8 @@ const PostForm: React.FC<PostFormProps> = ({
       // Handle success
       toast.success('Post created successfully!');
       setTimeout(() => {
-        router.replace("/admin")
-      }, 2000)
+        router.replace("/admin");
+      }, 2000);
     } catch (error) {
       // Handle errors
       console.error(error);
@@ -116,24 +115,21 @@ const PostForm: React.FC<PostFormProps> = ({
           >
             Writing Content
           </label>
-          <div className="mt-1">
-            <ReactQuill
-              value={writingContent}
-              onChange={setWritingContent}
-              theme="snow"
-              style={{
-                height: "300px", // Adjust the height as needed
-                maxHeight: "400px",
-              }}
-              className="w-full border border-gray-300 rounded-md shadow-sm"
-            />
-          </div>
+          <Textarea
+            id="writing_content"
+            name="writing_content"
+            value={writingContent}
+            onChange={(e) => setWritingContent(e.target.value)}
+            className="mt-1 block w-full"
+            rows={6} // Adjust rows for better visibility
+          />
           {errors.writing_content && (
             <div className="text-red-500 text-sm mt-2">
               {errors.writing_content}
             </div>
           )}
         </div>
+
         <div className="p-3"></div>
         <div className="mt-6">
           <label
