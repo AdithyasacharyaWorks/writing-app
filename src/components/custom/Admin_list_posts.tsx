@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PostList from '@/components/custom/Post_list';
 import Link from 'next/link';
 import { Button } from '../ui/button';

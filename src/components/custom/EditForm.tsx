@@ -86,7 +86,7 @@ const EditForm: React.FC<EditFormProps> = ({ postId }) => {
             }
 
             toast.success("Post updated successfully!");
-        } catch (error: any) {
+        } catch (error) {
             console.error(error);
             toast.error("An error occurred while updating the post.");
         } finally {

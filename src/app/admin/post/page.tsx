@@ -1,9 +1,8 @@
-"use client";
 import React from 'react';
 import PostForm from '@/components/custom/Post_form';
 
 
-const CreatePost: React.FC = () => {
+const Page = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="w-full max-w-2xl">
@@ -14,4 +13,4 @@ const CreatePost: React.FC = () => {
   );
 };
 
-export default CreatePost;
+export default Page;

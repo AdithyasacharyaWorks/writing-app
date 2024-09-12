@@ -17,8 +17,8 @@ export async function GET(request: Request, { params }: { params: { id: string }
     );
 
     return NextResponse.json({ message: 'Post retrieved successfully', data: response }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ message: 'An error occurred', error: error?.message }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ message: 'An error occurred'}, { status: 500 });
   }
 }
 
@@ -50,8 +50,8 @@ export async function PUT(request: Request, { params }: { params: { id: string }
     );
 
     return NextResponse.json({ message: 'Post updated successfully', data: updatedDocument }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ message: 'An error occurred', error: error?.message }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ message: 'An error occurred'}, { status: 500 });
   }
 }
 
@@ -71,7 +71,7 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
     );
 
     return NextResponse.json({ message: 'Post deleted successfully' }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ message: 'An error occurred', error: error?.message }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ message: 'An error occurred'}, { status: 500 });
   }
 }

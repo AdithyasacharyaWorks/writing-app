@@ -23,9 +23,9 @@ export async function POST(request: Request) {
     );
 
     return NextResponse.json({ message: 'Post created successfully', data: response }, { status: 201 });
-  } catch (error:any) {
+  } catch (err) {
     // Handle errors
-    return NextResponse.json({ message: 'An error occurred', error: error?.message }, { status: 500 });
+    return NextResponse.json({ message: 'An error occurred' }, { status: 500 });
   }
 }
 
@@ -51,8 +51,9 @@ export async function GET(request: Request) {
       );
     }
 
+    console.log(response.documents)
     return NextResponse.json({ message: 'Posts retrieved successfully', data: response.documents }, { status: 200 });
-  } catch (error: any) {
-    return NextResponse.json({ message: 'An error occurred', error: error?.message }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ message: 'An error occurred' }, { status: 500 });
   }
 }

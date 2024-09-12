@@ -21,7 +21,7 @@ const Home: React.FC = async () => {
 
       <Header />
       <div className="container mx-auto my-12 px-4 flex-grow">
-        {posts_data?.data.length === 0 && <h2>No posts yet</h2>}
+        {posts_data?.data?.length === 0 && <h2>No posts yet</h2>}
         <WritingList items={posts_data?.data} />
       </div>
 

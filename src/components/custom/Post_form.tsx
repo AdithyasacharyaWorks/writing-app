@@ -71,13 +71,12 @@ const PostForm: React.FC<PostFormProps> = ({
         throw new Error('Failed to create post');
       }
 
-      const result = await response.json();
       // Handle success
       toast.success('Post created successfully!');
       setTimeout(() => {
         router.replace("/admin")
       }, 2000)
-    } catch (error: any) {
+    } catch (error) {
       // Handle errors
       console.error(error);
       toast.error('An error occurred while creating the post.');

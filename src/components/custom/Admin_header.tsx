@@ -1,9 +1,8 @@
 // src/components/custom/Header.tsx
 import React from 'react';
-import Link from 'next/link';
+
 
 const Header: React.FC = () => {
-  const isLoggedIn = true; // Replace with actual authentication check
 
   return (
     <header className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-4 shadow-lg sticky top-0 z-50">
