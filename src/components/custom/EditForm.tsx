@@ -31,7 +31,7 @@ const EditForm: React.FC<EditFormProps> = ({ postId }) => {
     useEffect(() => {
         const fetchPostData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/post/${postId}`, {
+                const response = await fetch(`https://ananyawritings.netlify.app/api/post/${postId}`, {
                     cache: "no-store",
                 });
 

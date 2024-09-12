@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 const ListPosts: React.FC = async () => {
 
   // Fetch posts data
-  const posts_response = await fetch('http://localhost:3000/api/post?isAdmin=true', {
+  const posts_response = await fetch('https://ananyawritings.netlify.app//api/post?isAdmin=true', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

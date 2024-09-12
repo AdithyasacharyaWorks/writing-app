@@ -7,7 +7,7 @@ import Footer from '@/components/custom/Footer';
 const Home: React.FC = async () => {
   const isAdmin = false;  // Set the isAdmin flag here
   
-  const posts_response = await fetch(`http://localhost:3000/api/post?isAdmin=${isAdmin}`, {
+  const posts_response = await fetch(`https://ananyawritings.netlify.app//api/post?isAdmin=${isAdmin}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
